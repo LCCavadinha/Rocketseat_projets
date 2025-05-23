@@ -65,3 +65,42 @@ p {
 .info-card {
     margin: 20px 0;
 }
+
+.sugest, li {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li::marker {
+    color: #333333;
+}
+
+.list-blue {
+    color: #0C51A7;
+}
+
+.list-orange {
+    color: #E95E10;
+}
+
+.list-purple{
+    color: #591B98;
+}
+
+.list-rose {
+    color: #E5245E;
+}
+
+footer {
+    color: #591B98;
+    text-align: center;
+    padding: 130px 0 48px 0;
+}
+
+footer i {
+    vertical-align: middle ;
+}
