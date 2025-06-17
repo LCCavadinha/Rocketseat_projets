@@ -13,10 +13,32 @@
     --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
 
+    /* Fontes */
+    --font-family: 'Archivo', sans-serif;
+    --h1: 800 24px/1.35 var(--font-family);
+    --h2: 800 16px/1.40 var(--font-family);
+    --h3: 800 14px/1.40 var(--font-family);
+    --text-span: 600 14px/1.45 var(--font-family);
+    --text: 400 16px/1.40 var(--font-family);
+    --text-sm: 400 14px/1.60 var(--font-family);
 
 }
 
 body {
+    font: var(--text);
     color: var(--text-color-primary);
     background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--brand-light-color);
+}
+
+h1, h2, h3 {
+    font: inherit;
 }
