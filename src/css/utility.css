@@ -34,3 +34,7 @@
   font: var(--text-sm);
 }
 
+.aside-font {
+  font: var(--h3-aside);
+}
+
