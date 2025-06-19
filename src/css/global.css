@@ -4,3 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Cores */
+  --color-red: #E3646E;
+  --color-purple: #BB72E9;
+  --color-blue: #3996DB;
+  --color-green: #82BC4F;
+  --color-yellow: #EABD5F;
+  --base-gray-600: #E2E4E9;
+  --base-gray-500: #C0C4CE;
+  --base-gray-400: #878EA1;
+  --base-gray-300: #292C34;
+  --base-gray-200: #16181D;
+  --base-gray-100: #0D0E11;
+}
