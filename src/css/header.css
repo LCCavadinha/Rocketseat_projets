@@ -1,0 +1,15 @@
+#intro {
+  background-image: url(../assets/images/Background_Intro.png);
+  background-size: cover;
+  background-position: center;
+  height: 756px;
+  position: relative;
+
+  img {
+    width: 96px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+}

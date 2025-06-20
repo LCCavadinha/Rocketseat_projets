@@ -29,3 +29,12 @@
   --text-md: 400 16px/1.40 var(--font-maven-pro);
   --text-sm: 400 14px/1.40 var(--font-maven-pro);
 }
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--base-gray-200);
+}
