@@ -7,33 +7,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portifólio Dev</title>
+  <link rel="shortcut icon" href="./src/assets/icons/Code.ico" type="image/x-icon">
   <link rel="stylesheet" href="./src/css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Inconsolata&family=Maven+Pro&display=swap"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Inconsolata&family=Maven+Pro&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/98d7cb019f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <section id="intro" class="container">
-    <header class="info">
-      <div class="avatar">
-        <img src="./src/assets/images/1688086998362.png" alt="imagem do usuário Luiz Carlos">
-      </div>
-      <div>
-        <h3>Hello World! Meu nome é <span>Luiz Carlos</span> e sou</h3>
-        <h1>Desenvolvedor Fullstack</h1>
-        <p>
-          Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.
-        </p>
-      </div>
-      <div class="tags">
-        <ul>
-          <li>GitHub</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
+  <section id="intro" class="flex">
+    <div class="info grid">
+      <header class="profile flex">
+        <figure class="avatar">
+          <img src="./src/assets/images/1688086998362.png" alt="">
+          <img src="./src/assets//icons/Code.png" alt="">
+        </figure>
+        <div class="content flex">
+          <h3>Hello World! Meu nome é <span class="red-color">Luiz Carlos</span> e sou</h3>
+          <h1>Desenvolvedor Fullstack</h1>
+          <p>
+            Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo sistemas através da minha
+            paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.
+          </p>
+        </div>
+      </header>
+      <div class="tags flex">
+        <ul class="flex">
+          <li><i class="fa-brands fa-github"></i>GitHub</li>
+          <li><i class="fa-brands fa-html5 red-color"></i>HTML</li>
+          <li><i class="fa-brands fa-css3-alt blue-color"></i>CSS</li>
+          <li><i class="fa-brands fa-js yellow-color"></i>JavaScript</li>
+          <li><i class="fa-brands fa-react blue-color"></i>React</li>
+          <li><i class="fa-brands fa-node-js green-color"></i>Node.js</li>
         </ul>
       </div>
-    </header>
+      <div class="arrow">
+        <span>
+          <i class="fa-solid fa-angles-down"></i>
+        </span>
+      </div>
+    </div>
   </section>
 </body>
 

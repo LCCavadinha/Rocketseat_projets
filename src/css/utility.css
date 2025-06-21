@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.red-color {
+  color: var(--color-red) ;
+}
+
+.purple-color {
+  color: var(--color-purple);
+}
+
+.blue-color {
+  color: var(--color-blue);
+}
+
+.green-color {
+  color: var(--color-green);
+}
+
+.yellow-color {
+  color: var(--color-yellow);
+}
+
+
+
+
