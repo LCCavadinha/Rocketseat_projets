@@ -38,3 +38,21 @@
 body {
   background-color: var(--base-gray-200);
 }
+
+h2 {
+  font: var(--title-md);
+  color:var(--base-gray-600) ;
+}
+
+h3 {
+  font: var(--subtitle);
+}
+
+h4 {
+  font: var(--title-sm);
+  color: var(--base-gray-600);
+}
+
+p {
+  font: var(--text-sm);
+}
