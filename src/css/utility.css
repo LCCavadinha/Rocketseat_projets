@@ -26,6 +26,9 @@
   color: var(--color-yellow);
 }
 
+.bootstrap-color {
+  color: var(--bootstrap-color);
+}
 
 
 

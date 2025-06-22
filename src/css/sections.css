@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   gap: 56px;
-  padding-block:72px 144px;
+  padding-block: 72px 144px;
 
   .sections-title {
     /* margin-block: 72px 56px ; */
@@ -12,23 +12,29 @@
     gap: 8px;
   }
 
-  .cards{
-    /* max-width: 1040px;
-    width: 100%; */
+  .cards {
+    max-width: 1040px;
+    width: 100%;
     /* margin: 0 auto; */
     grid-template-columns: repeat(3, 1fr);
     /* grid-auto-flow: column; */
     gap: 24px;
 
     .card {
-      width: 330px;
-      height: 280px;
       flex-direction: column;
       align-items: center;
       gap: 20px;
       background-color: var(--base-gray-300);
       padding: 12px;
-      border-radius: 12px ;
+      border-radius: 12px;
+
+      figure {
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 12px;
+        }
+      }
 
       .content {
         text-align: start;
@@ -44,5 +50,3 @@
   }
 
 }
-
-

@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     gap: 56px;
+    justify-self: center;
 
 
     .avatar {
