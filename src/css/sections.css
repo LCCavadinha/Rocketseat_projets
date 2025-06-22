@@ -50,3 +50,37 @@
   }
 
 }
+
+#services {
+  flex-direction: column;
+  align-items: center;
+  padding: 88px 120px 120px;
+  gap: 56px;
+  background-color: var(--base-gray-100);
+
+  header {
+    text-align: center;
+
+  }
+
+  .card-services {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    .card-s {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      border: 2px solid var(--base-gray-200);
+      border-radius: 12px;
+
+      .content {
+        p {
+          margin-top: 8px;
+        }
+      }
+
+    }
+  }
+}
+
