@@ -2,28 +2,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 56px;
   padding-block: 72px 144px;
-
-  .sections-title {
-    /* margin-block: 72px 56px ; */
-    flex-direction: column;
-    gap: 8px;
-  }
 
   .cards {
     max-width: 1040px;
     width: 100%;
-    /* margin: 0 auto; */
     grid-template-columns: repeat(3, 1fr);
-    /* grid-auto-flow: column; */
-    gap: 24px;
 
     .card {
-      flex-direction: column;
       align-items: center;
-      gap: 20px;
       background-color: var(--base-gray-300);
       padding: 12px;
       border-radius: 12px;
@@ -39,77 +26,48 @@
       .content {
         text-align: start;
         padding: 4px;
-
-        p {
-          margin-top: 8px;
-          color: var(--base-gray-500);
-        }
       }
     }
-
   }
-
 }
-
 #services {
-  flex-direction: column;
   align-items: center;
   padding: 88px 120px 120px;
-  gap: 56px;
   background-color: var(--base-gray-100);
-
-  header {
-    text-align: center;
-
-  }
 
   .card-services {
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    max-width: 888px;
+    margin-inline: auto;
 
     .card-s {
-      flex-direction: column;
-      gap: 20px;
+      width: 100%;
       padding: 20px;
       border: 2px solid var(--base-gray-200);
       border-radius: 12px;
-
-      .content {
-        p {
-          margin-top: 8px;
-        }
-      }
-
     }
   }
 }
-
 #contacts {
   background-image: url(../assets/images/Background_Contacts.png);
   background-size: cover;
   background-position: center;
-  /* height: 49.18rem; */
   padding-block: 128px 200px;
-  flex-direction: column;
-  gap: 48px;
 
   header {
-    text-align: center;
-    flex-direction: column;
-    gap: 8px;
+    p {
+      font: var(--text-md);
+    }
   }
-
   .links {
     width: 400px;
-    flex-direction: column;
     margin-inline: auto;
-    gap: 16px;
+    
     li {
-
       list-style: none;
       padding: 20px;
       background-color: var(--base-gray-300);
-      border-radius: 12px;
+      border-radius: 8px;
 
       a {
         text-decoration: none;
@@ -124,7 +82,6 @@
       }
     }
   }
-
 }
 
 

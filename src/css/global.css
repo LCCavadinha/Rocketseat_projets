@@ -40,13 +40,19 @@ body {
   background-color: var(--base-gray-200);
 }
 
+h1 {
+  font: var(--title-lg);
+  color: var(--base-gray-600);
+}
+
 h2 {
   font: var(--title-md);
-  color:var(--base-gray-600) ;
+  color: var(--base-gray-600);
 }
 
 h3 {
   font: var(--subtitle);
+  color: var(--base-gray-500);
 }
 
 h4 {
