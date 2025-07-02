@@ -78,6 +78,43 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+  background: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.social-medias {
+  color: inherit;
+  /* &:hover {
+    background: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  } */
+}
+
+i {
+  font-size: 18px;
+  background: linear-gradient(
+  90deg,
+  var(--brand-color-secondary) 0%,
+  var(--brand-color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Tirando os bullets diretamente na lista, faz com que alguns navegadores deixem
