@@ -54,7 +54,7 @@
     --max-width: 80rem;
   }
   .desktop-only {
-  display: initial;
+    display: initial;
   }
   .even-columns {
     grid-auto-flow: column;
