@@ -115,7 +115,7 @@ img {
 }
 
 i {
-  font-size: 18px;
+  font-size: 20PX;
   background: linear-gradient(
   90deg,
   var(--brand-color-secondary) 0%,
