@@ -51,6 +51,7 @@ html {
   line-height: 1.6;
   color: var(--text-color-primary);
   overflow-x: hidden;
+  scroll-behavior: smooth;
   
 }
 
@@ -101,7 +102,7 @@ img {
 
 .social-medias {
   color: inherit;
-  /* &:hover {
+  &:hover {
     background: linear-gradient(
     90deg,
     var(--brand-color-secondary) 0%,
@@ -110,7 +111,7 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  } */
+  }
 }
 
 i {
