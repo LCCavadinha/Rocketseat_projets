@@ -23,6 +23,11 @@
   --text-base: 1rem;
   --text-lg: 2.5rem;
   --text-xl: 4rem;
+
+  /* ESPAÇAMENTOS */
+
+  --px-sm: 1.5rem;
+  --px-lg: 2rem;
 }
 
 html, button {
