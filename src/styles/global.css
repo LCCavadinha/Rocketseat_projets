@@ -21,8 +21,8 @@
   --ff-base:"Montserrat", sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-lg: 2.5rem;
-  --text-xl: 4rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
 
   /* ESPAÇAMENTOS */
 
@@ -46,4 +46,16 @@ h1 {
 h2 {
   font-size: var(--text-lg);
   line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (width >= 80em)  {
+  :root {
+  --text-lg: 2.5rem;
+  --text-xl: 4rem;
+  }
 }

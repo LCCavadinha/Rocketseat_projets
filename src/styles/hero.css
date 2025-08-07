@@ -1,0 +1,265 @@
+section.hero {
+  padding-block: 2.5rem;
+
+  & h1 div {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.5rem;
+    width: min-content;
+    vertical-align: bottom;
+  }
+
+  & h1 span:nth-child(1),
+  & h1 span:nth-child(4) {
+    color: var(--snitap-sky-mid);
+  }
+
+  & h1 span:nth-child(2) {
+    color: var(--snitap-joy-mid);
+  }
+
+  & h1 span:nth-child(3) {
+    color: var(--snitap-leaf-mid);
+  }
+
+  & h1 span {
+    display: block;
+
+    animation: slideUp 7s infinite ease;
+  }
+
+  /* BUTTONS */
+
+  & .buttons {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    & .button {
+      align-items: center;
+      gap: .75rem;
+      border-radius: 5rem;
+      transition: 350ms;
+
+      &.buy {
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    & .shadow {
+      /* Sombra gradativa */
+      box-shadow:
+        0 2px 5px rgb(0 0 0 / .1),
+        0 9px 9px rgb(0 0 0 / .09),
+        0 20px 12px rgb(0 0 0 / .05),
+        0 36px 15px rgb(0 0 0 / .01);
+    }
+  }
+}
+
+@keyframes slideUp {
+
+  /* Radical static */
+  0%,
+  22% {
+    transform: translateY(0);
+  }
+
+  23% {
+    transform: translateY(calc(-2.5rem - 8px));
+  }
+
+  25% {
+    transform: translateY(calc(-2.5rem + 6px));
+  }
+
+  27% {
+    transform: translateY(calc(-2.5rem - 4px));
+  }
+
+  29% {
+    transform: translateY(calc(-2.5rem + 6px));
+  }
+
+  31% {
+    transform: translateY(calc(-2.5rem - 4px));
+  }
+
+  /* Divertida in */
+  33%,
+  55% {
+    transform: translateY(-2.5rem);
+  }
+
+  56% {
+    transform: translateY(calc(-5rem - 8px));
+  }
+
+  58% {
+    transform: translateY(calc(-5rem + 6px));
+  }
+
+  60% {
+    transform: translateY(calc(-5rem - 4px));
+  }
+
+  62% {
+    transform: translateY(calc(-5rem + 6px));
+  }
+
+  64% {
+    transform: translateY(calc(-5rem - 4px));
+  }
+
+  /* Divertida static */
+  66%,
+  88% {
+    transform: translateY(-5rem);
+  }
+
+  89% {
+    transform: translateY(calc(-7.5rem - 8px));
+  }
+
+  91% {
+    transform: translateY(calc(-7.5rem + 6px));
+  }
+
+  93% {
+    transform: translateY(calc(-7.5rem - 4px));
+  }
+
+  95% {
+    transform: translateY(calc(-7.5rem + 6px));
+  }
+
+  97% {
+    transform: translateY(calc(-7.5rem - 4px));
+  }
+
+  /* 99% {
+    transform: translateY(calc(-7.5rem + 2px));
+  } */
+
+
+
+  /* saudável static */
+  100% {
+    transform: translateY(-7.5rem);
+  }
+}
+
+@media (width >=80em) {
+  section.hero {
+    & h1 {
+      max-width: 40rem;
+    }
+
+    & h1 div {
+      height: 5rem;
+    }
+
+    & .buttons {
+      gap: 2rem;
+      flex-direction: row;
+    }
+  }
+
+  @keyframes slideUp {
+
+    /* Radical static */
+    0%,
+    22% {
+      transform: translateY(0);
+    }
+
+    23% {
+      transform: translateY(calc(-5rem - 8px));
+    }
+
+    25% {
+      transform: translateY(calc(-5rem + 6px));
+    }
+
+    27% {
+      transform: translateY(calc(-5rem - 4px));
+    }
+
+    29% {
+      transform: translateY(calc(-5rem + 6px));
+    }
+
+    31% {
+      transform: translateY(calc(-5rem - 4px));
+    }
+
+    /* Divertida in */
+    33%,
+    55% {
+      transform: translateY(-5rem);
+    }
+
+    56% {
+      transform: translateY(calc(-10rem - 8px));
+    }
+
+    58% {
+      transform: translateY(calc(-10rem + 6px));
+    }
+
+    60% {
+      transform: translateY(calc(-10rem - 4px));
+    }
+
+    62% {
+      transform: translateY(calc(-10rem + 6px));
+    }
+
+    64% {
+      transform: translateY(calc(-10rem - 4px));
+    }
+
+    /* Divertida static */
+    66%,
+    88% {
+      transform: translateY(-10rem);
+    }
+
+    89% {
+      transform: translateY(calc(-15rem - 8px));
+    }
+
+    91% {
+      transform: translateY(calc(-15rem + 6px));
+    }
+
+    93% {
+      transform: translateY(calc(-15rem - 4px));
+    }
+
+    95% {
+      transform: translateY(calc(-15rem + 6px));
+    }
+
+    97% {
+      transform: translateY(calc(-15rem - 4px));
+    }
+
+    /* saudável static */
+    100% {
+      transform: translateY(-15rem);
+    }
+  }
+}
