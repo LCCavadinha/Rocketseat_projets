@@ -1,5 +1,5 @@
 section.hero {
-  padding-block: 2.5rem;
+  padding-block: 1rem 3rem;
   flex-direction: column-reverse;
   overflow: hidden;
 
@@ -78,7 +78,6 @@ section.hero {
     width: 100%;
     max-width: 18.5rem;
     height: 18.5rem;
-    border: 1px solid black;
 
 
     & .content {
@@ -245,6 +244,7 @@ section.hero {
 
 @media (width >=80em) {
   section.hero {
+    padding-block: 2.5rem;
     align-items: center;
     flex-direction: initial;
     justify-content: space-between;
