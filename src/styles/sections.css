@@ -1,0 +1,29 @@
+#smartphones-img {
+  background: url(../assets/images/ilustration.svg) top/cover;
+  margin-top: 5rem;
+}
+
+section {
+  header {
+    & strong {
+      display: block;
+      font: var(--fw-md) var(--fs-sm)/1.0 var(--ff-sans);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-color-primary);
+    }
+    & h2 {
+      margin-block: .5rem;
+
+    }
+    & p {
+      color: var(--text-color-secondary);
+    }
+  }
+}
+
+@media (width >=80em) {
+  #smartphones-img {
+    display: none;
+  }
+}
