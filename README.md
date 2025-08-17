@@ -1,2 +1,1 @@
-# Rocketseat_projets
-Repositório para projetos da Rocketseat
+# Projeto página de receitas
