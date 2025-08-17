@@ -1,0 +1,58 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-56 {
+  gap: 56px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.red-color {
+  color: var(--color-red) ;
+}
+
+.purple-color {
+  color: var(--color-purple);
+}
+
+.blue-color {
+  color: var(--color-blue);
+}
+
+.green-color {
+  color: var(--color-green);
+}
+
+.yellow-color {
+  color: var(--color-yellow);
+}
+
+.bootstrap-color {
+  color: var(--bootstrap-color);
+}
+
+
+
