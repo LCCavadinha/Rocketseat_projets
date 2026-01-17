@@ -44,9 +44,35 @@ function renderList() {
   // Limpando a lista antes de renderizar para manter o DOM sincronizado com o estado
   list.innerHTML = "";
 
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const li = document.createElement("li");
-    li.textContent = item.text;
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = item.completed;
+
+    checkbox.addEventListener("change", () => {
+      items[index].completed = checkbox.checked;
+      renderList();
+    });
+
+    const span = document.createElement("span");
+    span.textContent = item.text;
+
+    if (item.completed) {
+      span.style.textDecoration = "line-through";
+    };
+    
+    const button = document.createElement("button");
+    button.type = "button";
+    
+    const icon = document.createElement("i");
+    icon.classList.add("fa-regular", "fa-trash-can");
+    
+    button.appendChild(icon);
+    li.appendChild(checkbox);
+    li.appendChild(span);
+    li.appendChild(button);
     list.appendChild(li);
   });
 };
