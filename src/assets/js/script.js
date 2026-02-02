@@ -2,6 +2,7 @@ const form = document.getElementById("item-form");
 const input = document.getElementById("item-input");
 const feedback = document.getElementById("feedback");
 const list = document.getElementById("item-list");
+const empty = document.getElementById("empty-state");
 
 const items = [
   { text: "Pão de forma", completed: false },
@@ -44,6 +45,12 @@ function renderList() {
   // Limpando a lista antes de renderizar para manter o DOM sincronizado com o estado
   list.innerHTML = "";
 
+  if (items.length === 0) {
+    empty.style.display = "block";
+  } else {
+    empty.style.display = "none";
+  }
+
   items.forEach((item, index) => {
     const li = document.createElement("li");
 
@@ -62,13 +69,18 @@ function renderList() {
     if (item.completed) {
       span.style.textDecoration = "line-through";
     };
-    
+
     const button = document.createElement("button");
     button.type = "button";
-    
+
+    button.addEventListener("click", () => {
+      items.splice(index, 1);
+      renderList();
+    });
+
     const icon = document.createElement("i");
     icon.classList.add("fa-regular", "fa-trash-can");
-    
+
     button.appendChild(icon);
     li.appendChild(checkbox);
     li.appendChild(span);
