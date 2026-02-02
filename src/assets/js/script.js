@@ -26,7 +26,6 @@ form.addEventListener("submit", (event) => {
   items.push({ text: value, completed: false });
   renderList();
 
-  console.log(value);
   input.value = "";
 });
 
@@ -41,50 +40,71 @@ function showError(message) {
   }, 2000);
 };
 
+function showFeedback(message) {
+  feedback.textContent = message;
+  feedback.style.display = "block";
+
+  setTimeout(() => {
+    feedback.textContent = "";
+    feedback.style.display = "none";
+  }, 2000);
+}
+
+function createListItem(item, index) {
+  const li = document.createElement("li");
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = item.completed;
+
+  // Atualiza o estado com base na interação do usuário
+  checkbox.addEventListener("change", () => {
+    items[index].completed = checkbox.checked;
+    renderList();
+  });
+
+  const span = document.createElement("span");
+  span.textContent = item.text;
+
+  if (item.completed) {
+    span.style.textDecoration = "line-through";
+  }
+
+  const button = document.createElement("button");
+  button.type = "button";
+
+  button.addEventListener("click", () => {
+    // Captura o texto antes da remoção para exibir feedback ao usuário
+    const removedItem = items[index].text;
+    items.splice(index, 1);
+    showFeedback(`"${removedItem}" foi removido da lista.`);
+    renderList();
+  });
+
+  const icon = document.createElement("i");
+  icon.classList.add("fa-regular", "fa-trash-can");
+
+  button.appendChild(icon);
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  li.appendChild(button);
+
+  return li;
+}
+
 function renderList() {
   // Limpando a lista antes de renderizar para manter o DOM sincronizado com o estado
   list.innerHTML = "";
 
   if (items.length === 0) {
     empty.style.display = "block";
-  } else {
-    empty.style.display = "none";
-  }
+    return;
+  };
+
+  empty.style.display = "none";
 
   items.forEach((item, index) => {
-    const li = document.createElement("li");
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = item.completed;
-
-    checkbox.addEventListener("change", () => {
-      items[index].completed = checkbox.checked;
-      renderList();
-    });
-
-    const span = document.createElement("span");
-    span.textContent = item.text;
-
-    if (item.completed) {
-      span.style.textDecoration = "line-through";
-    };
-
-    const button = document.createElement("button");
-    button.type = "button";
-
-    button.addEventListener("click", () => {
-      items.splice(index, 1);
-      renderList();
-    });
-
-    const icon = document.createElement("i");
-    icon.classList.add("fa-regular", "fa-trash-can");
-
-    button.appendChild(icon);
-    li.appendChild(checkbox);
-    li.appendChild(span);
-    li.appendChild(button);
+    const li = createListItem(item, index);
     list.appendChild(li);
   });
 };
