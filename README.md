@@ -28,3 +28,4 @@ O estado da aplicação é representado por um array de objetos em memória:
 const items = [
   { text: "Pão de forma", completed: false }
 ];
+```
