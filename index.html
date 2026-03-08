@@ -13,34 +13,29 @@
 </head>
 
 <body>
-
   <header>
     <div class="logo">
       <img src="./src/assets/icons/logo.svg" alt="logo quicklist">
       <h1>quicklist</h1>
     </div>
   </header>
-
   <main>
     <div class="shopping">
-      <span>Voltar</span>
+      <a><i class="fa-solid fa-arrow-left"></i>Voltar</a>
       <h2>Compras da semana</h2>
     </div>
     <form id="item-form">
-      <input id="item-input" type="text" placeholder="Adcione um novo item" autocomplete="off">
-      <button type="submit">Adicionar</button>
+      <input id="item-input" type="text" placeholder="Adicione um novo item" autocomplete="off">
+      <button type="submit" class="add-item">Adicionar item</button>
     </form>
-
     <section>
       <ul id="item-list">
 
       </ul>
       <p id="empty-state">Sua lista está vazia.</p>
+      <div id="feedback" class="feedback-message"></div>
     </section>
-
-    <div id="feedback"></div>
   </main>
   <script src="./src/js/script.js"></script>
 </body>
-
 </html>

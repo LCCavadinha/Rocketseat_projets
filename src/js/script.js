@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
 
   // Interrompe o fluxo se o valor for inválido
   if (value === "") {
-    showError("Digite o nome do item antes de adicionar.");
+    showMessage("Digite o nome do item antes de adicionar.");
     return;
   };
 
@@ -29,21 +29,12 @@ form.addEventListener("submit", (event) => {
   input.value = "";
 });
 
-function showError(message) {
+function showMessage(message) {
   feedback.textContent = message;
+  feedback.classList.add("feedback-message");
   feedback.style.display = "block";
 
   // Remove a mensagem após alguns segundos para não bloquear o usuário
-  setTimeout(() => {
-    feedback.textContent = "";
-    feedback.style.display = "none";
-  }, 2000);
-};
-
-function showFeedback(message) {
-  feedback.textContent = message;
-  feedback.style.display = "block";
-
   setTimeout(() => {
     feedback.textContent = "";
     feedback.style.display = "none";
@@ -63,6 +54,15 @@ function createListItem(item, index) {
     renderList();
   });
 
+  const label = document.createElement("label");
+  label.classList.add("checkbox");
+
+  const checkmark = document.createElement("span");
+  checkmark.classList.add("checkmark");
+
+  label.appendChild(checkbox);
+  label.appendChild(checkmark);
+
   const span = document.createElement("span");
   span.textContent = item.text;
 
@@ -72,12 +72,14 @@ function createListItem(item, index) {
 
   const button = document.createElement("button");
   button.type = "button";
+  button.classList.add("remove-item");
+  button.title = `Apagar ${item.text}`;
 
   button.addEventListener("click", () => {
     // Captura o texto antes da remoção para exibir feedback ao usuário
     const removedItem = items[index].text;
     items.splice(index, 1);
-    showFeedback(`"${removedItem}" foi removido da lista.`);
+    showMessage(`"${removedItem}" foi removido da lista.`);
     renderList();
   });
 
@@ -85,7 +87,7 @@ function createListItem(item, index) {
   icon.classList.add("fa-regular", "fa-trash-can");
 
   button.appendChild(icon);
-  li.appendChild(checkbox);
+  li.appendChild(label);
   li.appendChild(span);
   li.appendChild(button);
 
